@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+.parent{
+ border: 2px black dotted;
+ display: inline-block;
+}
+.box {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two {
+  top: 20px;
+  left: 20px;
+  background: green;
+  position: absolute;
+
+}
+    </style>
+</head>
+<body>
+  
+<div class="parent">
+    <div class="box" id="one">One</div>
+    <div class="box" id="two">Two</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+</div>
+
+     
+    <script src="ap.js"></script>
+</body>
+</html> -->
+   <style>
+    .container{
+    background:yellow;
+    border: 1px solid #000000;
+    }
+    /* .clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    } */
+     .container::after{
+     content:".";
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+    } 
+    .container div {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    }
+    div.red {
+    float: left;
+    background: #ff0000
+    }
+    div.green {
+    float: right;
+    background: #00ff00;
+    }
+    </style>
+    </head>
+    
+    <body>
+        <div class="container clearfix">
+            <div class="red">Floated to left.</div>
+            <div class="green">Floated to right.</div>
+        </div>
+        <p><strong>Warning:</strong> Internet Explorer 7 and earlier version does not support the <code>:after</code> pseudo
+            element. IE8 supports, but require a <code>!DOCTYPE</code> to be declared.</p>
+    </body>
+    </html>
